@@ -1,16 +1,13 @@
+import java.util.Arrays;
+
 public class Algorithms {
 
-    public static Integer linearSearch(int[] arr, int item) {
-        for (int current : arr) {
-            if (current == item) {
-                return item;
-            }
-        }
-
-        return null;
+    public static boolean linearSearch(int[] arr, int item) {
+        return Arrays.stream(arr)
+                .anyMatch(i -> i == item);
     }
 
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 4, 5, 6 };
+        int[] arr = {1, 2, 3, 4, 5, 6};
     }
 }
