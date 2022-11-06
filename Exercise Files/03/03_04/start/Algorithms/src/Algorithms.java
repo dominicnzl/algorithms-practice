@@ -13,6 +13,8 @@ public class Algorithms {
         secondNode.next = thirdNode;
         thirdNode.next = fourthNode;
 
-        linkedList.displayContents();
+        linkedList.displayContents(); // 3->4->5->6->
+        linkedList.deleteBackHalf();
+        linkedList.displayContents(); // 3->4->
     }
 }
