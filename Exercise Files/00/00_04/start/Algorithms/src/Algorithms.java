@@ -14,6 +14,18 @@ public class Algorithms {
         return c;
     }
 
+    // reduce number of comparisons to two by adding another variable to hold the maximum value
+    static int findMax2(int a, int b, int c) {
+        int max = a;
+        if (b > max) {
+            max = b;
+        }
+        if (c > max) {
+            max = c;
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
 
         System.out.println(findMaximum(1, 2, 3));
