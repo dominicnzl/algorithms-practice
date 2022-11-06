@@ -1,7 +1,17 @@
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class Algorithms {
 
+    // my solution
     public static String reverseEachWord(String s) {
-        return s;
+        if (s == null || s.isEmpty()) {
+            return s;
+        }
+        return Arrays.stream(s.split(" "))
+                .map(String::trim)
+                .map(Algorithms::reverse)
+                .collect(Collectors.joining(" "));
     }
 
     public static String reverse(String s) {

@@ -1,7 +1,19 @@
 public class Algorithms {
 
+    // course solution
     public static String reverseEachWord(String s) {
-        return s;
+        if (s == null || s.isEmpty()) {
+            return s;
+        }
+        StringBuilder result = new StringBuilder();
+        String[] arr = s.split(" ");
+        for (int i = 0; i < arr.length; i++) {
+            result.append(reverse(arr[i]));
+            if (i != arr.length - 1) {
+                result.append(" ");
+            }
+        }
+        return result.toString();
     }
 
     public static String reverse(String s) {
